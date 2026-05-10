@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+
+:root {
+  --bg-top: #fff6fa;
+  --bg-bottom: #f5fbff;
+  --title: #41354d;
+  --text: #665d73;
+  --text-soft: #7d7388;
+  --line: rgba(255, 184, 214, 0.32);
+  --panel-shadow: 0 24px 60px rgba(220, 168, 193, 0.16);
+
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 190, 216, 0.5), transparent 28%),
+    radial-gradient(circle at top right, rgba(162, 228, 255, 0.45), transparent 26%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2 {
+  color: var(--title);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+#root {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+}
